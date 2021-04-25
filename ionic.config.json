@@ -1,0 +1,7 @@
+{
+  "name": "steam-huebr",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
