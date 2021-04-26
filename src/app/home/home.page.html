@@ -1,0 +1,31 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      <ion-icon name="game-controller-outline"></ion-icon>Bem-vindo
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">TESTE</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>    
+    <ion-slides pager="true" [options]="slideOpts">
+      <ion-slide>
+        <ion-img [src]="'https://super.abril.com.br/wp-content/uploads/2018/08/futebol-brasil.png'"></ion-img>
+      </ion-slide>
+      <ion-slide>
+        <ion-img [src]="'http://s2.glbimg.com/C47b1PAM5mEJjLVum8VW7A9M2fc=/0x0:1280x1024/695x556/s.glbimg.com/po/tt2/f/original/2013/01/23/cs1.jpg'"></ion-img>
+      </ion-slide>
+      <ion-slide>
+        <ion-img [src]="'http://mmorpgbr.com.br/wp-content/uploads/2020/07/tibia-nivel-1000-1280x720_Easy-Resize.com_.jpg'"></ion-img>
+      </ion-slide>
+    </ion-slides>
+  </ion-content>
