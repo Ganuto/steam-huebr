@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Storage } from '@ionic/storage';
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -11,5 +12,9 @@ export class AppComponent {
     { title: 'Favoritos', url: '/favoritos', icon: 'heart' }
   ];
 
-  constructor() { }
+  constructor(private storage: Storage) { }
+
+  async ngOnInit() {
+    await this.storage.create();
+  }
 }
