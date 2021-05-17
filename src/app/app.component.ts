@@ -8,7 +8,7 @@ import { Storage } from '@ionic/storage';
 export class AppComponent {
   public appPages = [
     { title: 'Home', url: '/home', icon: 'home' },
-    { title: 'Login / Registar', url: '/login', icon: 'log-in' },
+    // { title: 'Login / Registar', url: '/login', icon: 'log-in' },
     { title: 'Favoritos', url: '/favoritos', icon: 'heart' }
   ];
 

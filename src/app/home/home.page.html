@@ -16,16 +16,19 @@
     </ion-toolbar>
   </ion-header>
 
-  <ion-content>    
+  <ion-content>
     <ion-slides pager="true" [options]="slideOpts">
-      <ion-slide>
-        <ion-img [src]="'https://super.abril.com.br/wp-content/uploads/2018/08/futebol-brasil.png'"></ion-img>
-      </ion-slide>
-      <ion-slide>
-        <ion-img [src]="'http://s2.glbimg.com/C47b1PAM5mEJjLVum8VW7A9M2fc=/0x0:1280x1024/695x556/s.glbimg.com/po/tt2/f/original/2013/01/23/cs1.jpg'"></ion-img>
-      </ion-slide>
-      <ion-slide>
-        <ion-img [src]="'http://mmorpgbr.com.br/wp-content/uploads/2020/07/tibia-nivel-1000-1280x720_Easy-Resize.com_.jpg'"></ion-img>
+      <ion-slide *ngFor="let planeta of planetas; let i = index">
+        <img *ngIf="planeta.name === 'Tatooine'" src="assets/img/Tatooine_TPM.png" routerLink="/detalhes/0">
+        <img *ngIf="planeta.name === 'Alderaan'" src="assets/img/Alderaan_2.jpg" routerLink="/detalhes/1">
+        <img *ngIf="planeta.name === 'Yavin IV'" src="assets/img/Yavin-4-SWCT.png" routerLink="/detalhes/2">
+        <img *ngIf="planeta.name === 'Hoth'" src="assets/img/Hoth_SWCT.png" routerLink="/detalhes/3">
+        <img *ngIf="planeta.name === 'Dagobah'" src="assets/img/Dagobah_ep3.jpg" routerLink="/detalhes/4">
+        <img *ngIf="planeta.name === 'Bespin'" src="assets/img/Bespin-SWCT.png" routerLink="/detalhes/5">
+        <img *ngIf="planeta.name === 'Endor'" src="assets/img/Endor_FFGRebellion.png" routerLink="/detalhes/6">
+        <img *ngIf="planeta.name === 'Naboo'" src="assets/img/Naboo_planet.png" routerLink="/detalhes/7">
+        <img *ngIf="planeta.name === 'Coruscant'" src="assets/img/CoruscantGlobeE1.png" routerLink="/detalhes/8">
+        <img *ngIf="planeta.name === 'Kamino'" src="assets/img/Kamino-DB.png" routerLink="/detalhes/9">
       </ion-slide>
     </ion-slides>
   </ion-content>

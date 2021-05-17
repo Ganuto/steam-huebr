@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { FilmesService } from '../services/filmes.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomePage implements OnInit {
 
-  constructor() { }
+  public planetas: Array<Object>;
+
+  constructor(private filmesService: FilmesService, private router: Router) { }
 
   ngOnInit() {
+    this.filmesService.consultarTodos().subscribe(values => {
+      this.planetas = values.body.results;
+    });
   }
 
 }
