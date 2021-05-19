@@ -5,11 +5,15 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class FilmesService {
+export class PlanetasService {
 
   constructor(private httpClient: HttpClient) { }
 
   consultarTodos(): Observable<HttpResponse<any>> {
-    return this.httpClient.get('https://swapi.dev/api/planets', {observe: 'response'});
+    return this.httpClient.get('https://swapi.dev/api/planets', { observe: 'response' });
+  }
+
+  consultarPorId(id: string): Observable<HttpResponse<any>> {
+    return this.httpClient.get(`https://swapi.dev/api/planets/${id}`, { observe: 'response' });
   }
 }

@@ -13,7 +13,7 @@
   <ion-list>
 
     <ion-item-sliding id="item100">
-      <ion-item href="/produto">
+      <ion-item>
         <ion-label>
           <ion-img [src]="'https://super.abril.com.br/wp-content/uploads/2018/08/futebol-brasil.png'"></ion-img>
           <h1>Futebol Manager 2024</h1>
@@ -23,7 +23,7 @@
       </ion-item>
       
       <ion-item-options side="end">
-        <ion-item-option>
+        <ion-item-option (click)="adicionarFavoritos()">
           <ion-icon slot="icon-only" name="star"></ion-icon>
         </ion-item-option>
       </ion-item-options>

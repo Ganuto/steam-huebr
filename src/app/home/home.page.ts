@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { FilmesService } from '../services/filmes.service';
+import { Storage } from '@ionic/storage';
+import { PlanetasService } from '../services/planetas.service';
 
 @Component({
   selector: 'app-home',
@@ -11,12 +11,18 @@ export class HomePage implements OnInit {
 
   public planetas: Array<Object>;
 
-  constructor(private filmesService: FilmesService, private router: Router) { }
+  constructor(private filmesService: PlanetasService, private storage: Storage) { }
+
+  slideOpts = {
+    initialSlide: 1,
+    speed: 400
+  };
 
   ngOnInit() {
     this.filmesService.consultarTodos().subscribe(values => {
       this.planetas = values.body.results;
     });
+    
   }
 
 }
